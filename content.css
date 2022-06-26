@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Serif+4:opsz,wght@8..60,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Serif+4:opsz,wght@8..60,600&display=swap');
+*{
+    box-sizing: border-box;
+    transition: all ease-in-out 250ms;
+}
+body{
+    margin:0;
+    text-align: center;
+    font-family:"Raleway",sans-serif;
+}
+img{
+    max-width: 200px;
+    max-height: 300px;
+    display:inline-block;
+}
+.logo{
+    font-family:"Bebas Neue", cursive;
+    color: rgb(117, 139, 253);
+    display:inline-block;
+    margin-bottom: 0;
+    font-size: 70px;
+    text-align: center;
+}
+.logo span{
+    opacity: 0;
+    transition: all 2s ease;
+}
+.logo span.fade{
+    opacity: 1;
+}
+@media screen and (max-width:426px){
+    .logo{
+        font-size:30px;
+        display:flex;
+        justify-content: center;
+    }
+}
+h1{
+    font-weight: 300;
+    font-size: 4rem;
+    color:rgb(117, 139, 253)
+}
+#top{
+    font-family: "Bebas Neue", cursive;
+}
+.text{
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1em;
+    padding-right: 1em;
+    color:white;
+    margin-top: 1em;
+    font-weight: 700;
+}
+@media (max-width: 796px){
+    .text{
+        font-size: 2rem;
+        margin-top: 150px;
+    }
+}
+@media (max-width: 426px){
+    .text span.bold{
+        font-size: 40px;
+    }
+}
+.text span{
+    font-weight: 300;
+    display: block;
+    font-size: .85em;
+}
+span.bold{
+    font-weight: 700;
+    color: #758BFD;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 4rem;
+}
+.name{
+    font-weight: 600;
+    font-size: 2rem;
+    color: #758BFD;
+    text-transform: uppercase;
+    padding: 5px;
+}
+td{
+    color: #55494B;
+    font-weight: 600;
+    padding: 10px;
+    font-family: "Bebas Neue", cursive;
+    font-size: 20px;
+}
+td span{
+    color:#758BFD;
+    font-weight: 200;
+    text-decoration-color: #758BFD;
+    font-family: "Bebas Neue", cursive;
+    font-size: 20px;
+    text-transform: uppercase; 
+}
+.guide-head h1{
+    font-weight: 300;
+    color:#55494B;
+    text-transform: uppercase;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.button{
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-width:2px;
+    border-style: solid;
+    padding: 0.5em 1.75em;
+    color: white;
+}
+.button-accent:hover,
+.button-accent:focus{
+    background-color: #758BFD;
+    color: white;
+}
+header{
+    position: absolute;
+    margin-top: 1em;
+    left: 0;
+    right: 0;
+}
+nav ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+nav li{
+    display:inline-block;
+    margin: 1em;
+}
+nav a{
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    padding: 1.5em;
+    color:rgb(117, 139, 253);
+}
+nav a:hover,
+nav a:focus{
+    color:white;
+}
+.topnav .icon{
+    display:none;
+}
+@media screen and (max-width:426px){
+    .topnav li{
+        display: none;
+    }
+    .topnav a.icon {
+        display: block;
+        float: right;
+    }
+}
+@media screen and (max-width: 426px) {
+    .topnav.responsive {
+        position:relative;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: right;
+        display: block;
+        text-align: right;
+    }
+}
+table{
+    padding-bottom: 5px;
+}
+.guide{
+    width:50%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 50 #EE6123;
+    margin:auto;
+}
+.guide td a {
+    text-decoration: none;
+    color: #758BFD;
+}
+footer{
+    background-color: #55494B;
+    color:white;
+    text-align: center;
+    height: auto;
+}
+.col-3{
+    padding:1em 0;
+}
+.container{
+    width:95%;
+    margin:0 auto;
+}

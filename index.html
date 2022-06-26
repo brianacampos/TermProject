@@ -1,12 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Place Holder</title>
-</head>
-<body>
-    This is a placeholder
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BayLivin'</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="site.webmanifest" />
+    <meta
+      name="description"
+      content="A guide to the Bay Area brough to you by a local born and raised in the area!"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">
+        <span class="fade">B</span>
+        <span class="fade">a</span>
+        <span class="fade">y</span>
+        <span class="fade"> </span>
+        <span class="fade">L</span>
+        <span class="fade">i</span>
+        <span class="fade">v</span>
+        <span class="fade">i</span>
+        <span class="fade">n</span>
+        <span class="fade">'</span>
+      </h1>
+      <nav class="topnav" id="myTopnav">
+        <a href="#" class="icon" onclick="navBar()">
+          <i class="fa fa-bars"></i>
+        </a>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="restaurants.html">Restaurants</a>
+          </li>
+          <li>
+            <a href="brunch.html">Brunch</a>
+          </li>
+          <li>
+            <a href="outdoor.html">Outdoor</a>
+          </li>
+          <li>
+            <a href="quick-stops.html">Quick Stop</a>
+          </li>
+          <li>
+            <a href="nightlife.html">Nightlife</a>
+          </li>
+          <li>
+            <a href="activities.html">Activities</a>
+          </li>
+          <li>
+            <a href="contact-us.html">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="home-hero">
+      <div class="home-text">
+        <h1 class="home-text">
+          The ultimate guide to the Bay Area,
+          <span>provided to you by a local.</span>
+        </h1>
+        <a href="#about" class="button button-accent">About Us</a>
+      </div>
+      <section class="home-hero::after"></section>
+    </section>
+    <div class="container">
+      <section class="home-about">
+        <div class="home-about-text" id="about">
+          <h1 id="titletext">Who We Are</h1>
+          <p id="about-me">
+            BayLivin is a website created as a project for a Web Tech course at
+            Babson College.
+          </p>
+          <p id="about-us">
+            This website serves as a insider guide to all the amazing spots in
+            the Bay Area. Most of these spots are not well known unless you are
+            native to the Bay Area. We've got you covered from places to eat, to
+            go out to, or even just to soak up the beautiful California sun!
+            We'll make sure you get the most out of your experience!
+          </p>
+          <p id="clickAny"></p>
+          <br />
+          <button class="about-button" id="aboutBtn">More</button>
+        </div>
+        <div id="img-contain">
+          <img
+            src="images/briana.jpg"
+            alt="my image"
+            title="myImg"
+            id="myImg"
+          />
+        </div>
+        <section class="home-about::after"></section>
+      </section>
+    </div>
+    <br />
+    <br />
+    <h1 class="contentText">FEATURED CONTENT</h1>
+    <div class="slideshow-container">
+      <div class="mySlides fade" style="display: block">
+        <div class="numbertext">1 / 6</div>
+        <img
+          src="images/koisushi.jpg"
+          alt="restaurant"
+          title="restaurant"
+          style="width: 100%"
+        />
+        <div class="imgText">
+          <p>Restaurants</p>
+          <a href="restaurants.html" class="button button-home buttom-small"
+            >Explore More</a
+          >
+        </div>
+      </div>
+      <div class="mySlides fade" style="display: none">
+        <div class="numbertext">2 / 6</div>
+        <img
+          src="images/littlelouie.jpg"
+          alt="brunch"
+          title="brunch"
+          style="width: 100%"
+        />
+        <div class="imgText">
+          <p>Brunch</p>
+          <a href="brunch.html" class="button button-home button-small"
+            >Explore More</a
+          >
+        </div>
+      </div>
+      <div class="mySlides fade" style="display: none">
+        <div class="numbertext">3 / 6</div>
+        <img
+          src="images/dolorespark.jpg"
+          alt="outdoors"
+          title="outdoors"
+          style="width: 100%"
+        />
+        <div class="imgText">
+          <p>Outdoors</p>
+          <a href="outdoor.html" class="button button-home button-small"
+            >Explore More</a
+          >
+        </div>
+      </div>
+      <div class="mySlides fade" style="display: none">
+        <div class="numbertext">4 / 6</div>
+        <img
+          src="images/kaleidoscope.jpg"
+          alt="quick-stops"
+          title="quick-stops"
+          style="width: 100%"
+        />
+        <div class="imgText">
+          <p>Quick Stops</p>
+          <a href="quick-stops.html" class="button button-home button-small"
+            >Explore More</a
+          >
+        </div>
+      </div>
+      <div class="mySlides fade" style="display: none">
+        <div class="numbertext">5 / 6</div>
+        <img
+          src="images/marinwaterfalls.jpg"
+          alt="activities"
+          title="activities"
+          style="width: 100%"
+        />
+        <div class="imgText">
+          <p>Activities</p>
+          <a href="activities.html" class="button button-home button-small"
+            >Explore More</a
+          >
+        </div>
+      </div>
+      <div class="mySlides fade" style="display: none">
+        <div class="numbertext">6 / 6</div>
+        <img
+          src="images/kips.jpg"
+          alt="nightlife"
+          title="nightlife"
+          style="width: 100%"
+        />
+        <div class="imgText">
+          <p>Nightlife</p>
+          <a href="nightlife.html" class="button button-home button-small"
+            >Explore More</a
+          >
+        </div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&gt;</a>
+      <a class="next" onclick="plusSlides(1)">&lt;</a>
+    </div>
+    <br />
+    <div style="text-align: center">
+      <span class="dot active" onclick="currentslide(1)"></span>
+      <span class="dot" onclick="currentslide(2)"></span>
+      <span class="dot" onclick="currentslide(3)"></span>
+      <span class="dot" onclick="currentslide(4)"></span>
+      <span class="dot" onclick="currentslide(5)"></span>
+    </div>
+    <br />
+    <section class="subscribe">
+      <div class="container">
+        <h1 class="home-text text-sub">
+          Want More From The Bay Area?
+          <span>Share your info in the contact page to stay in touch!</span>
+        </h1>
+        <a href="contact-us.html" class="button button-accent">CONTACT US</a>
+      </div>
+      <section class="subscribe::after"></section>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="col-3">
+          <p>This is a project for a WebTech course at Babson College.</p>
+        </div>
+        <div class="sitemap-link">
+          <a href="sitemap.html" class="button button-small">SITEMAP</a>
+        </div>
+        <br />
+      </div>
+      <section class="footer::after"></section>
+    </footer>
+    <script>
+      function navBar() {
+        let nav = document.getElementById("myTopnav");
+        if (nav.className === "topnav") {
+          nav.className += "responsive";
+        } else {
+          nav.className = "topnav";
+        }
+      }
+      document.getElementsByClassName("icon").onclick = function () {
+        navBar();
+      };
+      const btn = document.getElementById("aboutBtn");
+      const about = document.getElementById("about-me");
+      const more = document.getElementById("about-us");
+      const clickAny = document.getElementById("clickAny");
+      const aboutMe = (e) => {
+        e.stopPropagation();
+        console.log("...starting change text function...");
+        about.textContent = "Hey! I'm Briana Campos";
+        more.textContent =
+          "I was born and raised in the Bay Area. I have a huge passion for where I was grew up. I found that the culture in which I grew up in, plays a huge part in who I am today. Which is why I would love to share my favorites from the Bay with you guys!";
+        clickAny.textContent =
+          "Click anywhere on the page to revert to original text.";
+        console.log("...changing element style...");
+        btn.style.backgroundColor = "sunglow";
+        btn.innerHTML = "Less";
+        about.style.fontSize = "30px";
+        about.style.color = "sunglow";
+        clickAny.style.color = "sunglow";
+        clickAny.style.fontFamily = "Bebas Neue";
+      };
+      const orgText = () => {
+        console.log("...starting restore original text function...");
+        about.textContent =
+          "BayLivin' is a website created as a project for a Web Tech course at Babson College.";
+        more.textContent =
+          "This website serves as a insider guide to all the amazing spots in the Bay Area. Most of these spots are not well known unless you are native to the Bay Area. We've got you covered from places to eat, to go out to, or even just to soak up the beautiful California sun! We'll make sure you get the most out of your experience! ";
+        clickAny.textContent = "";
+        console.log("...reverting to original styles");
+        btn.style.backgroundColor = "white";
+        btn.innerHTML = "More";
+        about.style.fontFamily = "raleway";
+        about.style.fontSize = "19px";
+        about.style.color = "white";
+        more.style.fontFamily = "raleway";
+      };
+      btn.addEventListener("click", aboutMe);
+      document.addEventListener("click", orgText);
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        if (((i = 0), i < slides.length, i++)) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace("active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += "active";
+      }
+      const img = document.getElementById("myImg");
+      function enlargeImg() {
+        img.src = "images/another1.jpg";
+      }
+      document.getElementById("myImg").onmouseover = function () {
+        enlargeImg();
+        console.log("...its working...");
+      };
+      function resetImg() {
+        console.log("...starting resize image function...");
+        img.src = "images/briana.jpg";
+      }
+      document.getElementById("myImg").onmouseout = function () {
+        resetImg();
+      };
+      const text = document.querySelector(".logo");
+      const strText = text.textContent;
+      const splitText = strText.split("");
+      text.textContent = "";
+      console.log(splitText);
+      for (let i = 0; i < splitText.length; i++) {
+        text.innerHTML += "<span>" + splitText[i] + "</span>";
+      }
+      let char = 0;
+      let timer = setInterval(onTick, 50);
+      function onTick() {
+        const span = text.querySelectorAll("span")[char];
+        span.classList.add("fade");
+        char++;
+        if (char === splitText.length) {
+          complete();
+          return;
+        }
+        function complete() {
+          clearInterval(timer);
+          timer = null;
+        }
+      }
+    </script>
+  </body>
 </html>
