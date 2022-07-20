@@ -283,7 +283,7 @@
           "Click anywhere on the page to revert to original text.";
         console.log("...changing element style...");
         btn.style.backgroundColor = "sunglow";
-        btn.innerHTML = "Less";
+        btn.innerHTML = "CLICK ANYWHERE";
         about.style.fontSize = "30px";
         about.style.color = "sunglow";
         clickAny.style.color = "sunglow";
@@ -309,7 +309,7 @@
       let slideIndex = 1;
       showSlides(slideIndex);
       function plusSlides(n) {
-        showSlides((slideIndex += n));
+        showSlides(slideIndex += n);
       }
       function showSlides(n) {
         let i;
@@ -321,7 +321,7 @@
         if (n < 1) {
           slideIndex = slides.length;
         }
-        if (((i = 0), i < slides.length, i++)) {
+        if ((i = 0), i < slides.length, i++) {
           slides[i].style.display = "none";
         }
         for (i = 0; i < dots.length; i++) {
