@@ -89,31 +89,209 @@
         </ul>
       </nav>
     </header>
-    <section class="feedback-form">
-      <div class="feedback">
-        <h1>Feedback</h1>
-        <form action="#" method="post" name="myForm" target="_blank"></form>
-        <fieldset class="one">
-          <legend>Your Info</legend>
-          <div class="info">
-            <label for="name">Name:</label>
-            <input type="text" placeholder="Full Name" name="fname" id="name" />
-          </div>
-          <div class="info">
-            <label for="email">Email:</label>
-            <input type="text" placeholder="Email" name="email" id="email" />
-          </div>
-          <div class="info">
-            <label for="phone">Phone:</label>
-            <input
-              type="text"
-              placeholder="Phone Number"
-              name="phone"
-              id="phone"
-            />
-          </div>
-        </fieldset>
+    <section class="contact-hero">
+      <div class="contact-text">
+        <h1 class="contact-text">We want to hear your thoughts!</h1>
+        <h1 id="small">Please fill out the feedback survey below in order to improve this website for all users!</h1>
       </div>
     </section>
+    <section class="feedback-form">
+      <div class="feedback">
+        <h1>Recommendations & Feedback</h1>
+        <form
+          action="https://www.baylivin.me/contact-us.html"
+          method="POST"
+          name="myForm"
+          target="_blank"
+          onsubmit="target_popup(this)"
+        >
+          <fieldset class="one">
+            <legend>Your Info</legend>
+            <div class="info">
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                placeholder="Full Name"
+                name="fname"
+                id="name"
+              />
+            </div>
+            <div class="info">
+              <label for="email">Email:</label>
+              <input
+                type="text"
+                placeholder="Email Address"
+                name="email"
+                id="email"
+              />
+            </div>
+            <div class="info">
+              <label for="phone">Phone:</label>
+              <input
+                type="text"
+                placeholder="Phone Number"
+                name="phone"
+                id="phone"
+              />
+            </div>
+          </fieldset>
+          <fieldset class="two">
+            <legend>Recommendations</legend>
+            <div class="recs">
+              <label for="recs">Restaurants:</label>
+              <input
+                type="text"
+                placeholder="Best Place to Eat..."
+                name="rest-recs"
+                id="rest"
+              />
+            </div>
+            <div class="recs">
+              <label for="recs">Brunch:</label>
+              <input
+                type="text"
+                placeholder="Best Brunches in the Bay..."
+                name="brunch-recs"
+                id="brunch"
+              />
+            </div>
+            <div class="recs">
+              <label for="recs">Outdoor:</label>
+              <input
+                type="text"
+                placeholder="Best Outdoors in the Bay... "
+                name="outdoor-recs"
+                id="outdoor"
+              />
+            </div>
+            <div class="recs">
+              <label for="recs">Quick Stops:</label>
+              <input
+                type="text"
+                placeholder="Best Quick Stops in the Bay..."
+                name="quick-recs"
+                id="quickstops"
+              />
+            </div>
+            <div class="recs">
+              <label for="recs">Nightlife:</label>
+              <input
+                type="text"
+                placeholder="Best Place to Party..."
+                name="nightlife-recs"
+                id="nightlife"
+              />
+            </div>
+            <div class="recs">
+              <label for="recs">Activities:</label>
+              <input
+                type="text"
+                placeholder="Best Activities in the Bay..."
+                name="activities-recs"
+                id="activities"
+              />
+            </div>
+          </fieldset>
+          <fieldset class="three">
+            <legend>Feedback</legend>
+            <br />
+            <div class="review">
+              <label>What did you think about this website?</label>
+            </div>
+            <div class="input">
+              <input type="radio" name="review" value="amazing" />
+              <label>Amazing</label>
+              <input type="radio" name="review" value="good" />
+              <label>Good</label>
+              <input type="radio" name="review" value="neutral" />
+              <label>Neutral</label>
+              <input type="radio" name="review" value="poor" />
+              <label>Poor</label>
+              <input type="radio" name="review" value="terrible" />
+              <label>Terrible</label>
+            </div>
+            <br />
+            <div class="review">
+              <label>Additional Comments & Feedback:</label>
+            </div>
+            <div class="comment">
+              <textarea name="comment" id="comment" cols="36" rows="6">
+              </textarea>
+            </div>
+            <div>
+              <input type="checkbox" name="update" checked />
+              Sign me up for email updates
+            </div>
+            <br />
+          </fieldset>
+          <button type="submit" class="submit">Submit</button>
+          <br />
+          <br />
+          <br />
+          <br />
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="col-3">
+          <p>This is a project for a Web Tech course at Babson College.</p>
+        </div>
+        <div class="sitemap-link">
+          <a href="sitemap.html" class="button button-small">SITEMAP</a>
+        </div>
+        <br />
+      </div>
+    </footer>
+    <script>
+      function navbar() {
+        let nav = document.getElementById("myTopnav");
+        if (nav.className === "topnav") {
+          nav.className += "responsive";
+        } else {
+          nav.className = "topnav";
+        }
+      }
+      document.getElementsByClassName("icon").onclick = function () {
+        navBar();
+      };
+      const text = document.querySelector(".logo");
+      const strText = text.textContent;
+      const splitText = strText.split("");
+      text.textContent = "";
+      console.log(splitText);
+      for (let i = 0; i < splitText.length; i++) {
+        text.innerHTML += "<span>" + splitText[i] + "</span>";
+      }
+      let char = 0;
+      let timer = setInterval(onTick, 50);
+      function onTick() {
+        const span = text.querySelectorAll("span")[char];
+        span.classList.add("fade");
+        char++;
+        if (char === splitText.length) {
+          complete();
+          return;
+        }
+        function complete() {
+          clearInterval(timer);
+          timer = null;
+        }
+      }
+      function validate() {
+        let form = document.getElementsByName("myForm");
+        if (form["fname"].value.length == 0){
+          alert("Name must be filled out!");
+        }
+      }
+      document.getElementsByClassName("submit").onclick = function(){
+        validate();
+      }
+      function popup(form) {
+        alert('Thank you for your feedback!');
+        window.open(' ','UniqueWindowName','width=400, height=400,resizeable,scrollbars');
+        form.target='UniqueWindowName';
+      }
+    </script>
   </body>
 </html>

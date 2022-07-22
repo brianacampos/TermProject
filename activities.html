@@ -89,5 +89,228 @@
         </ul>
       </nav>
     </header>
+    <section class="activities-hero">
+      <div class="bio">
+        <h1 class="text">
+          The ultimate guide to my favorite
+          <span class="bold">Activities</span>
+          in the Bay Area!
+          <span>All in one place!</span>
+        </h1>
+        <a href="#top" class="button button-accent">See Guide</a>
+      </div>
+    </section>
+    <div class="guide-head">
+      <h1 id="top">Activities Guide</h1>
+    </div>
+    <table class="guide">
+      <tbody>
+        <tr>
+          <td colspan="4" class="name">Tilden Regional Park</td>
+        </tr>
+        <tr>
+          <td class="img1">
+            <img src="images/tilden1.jpg" alt="Steam Train" title="Train" />
+          </td>
+          <td class="img1">
+            <img src="images/tilden2.jpg" alt="Merry Go Round" title="Inside" />
+          </td>
+          <td class="img1">
+            <img src="images/tilden3.jpg" alt="Little Farm" title="Farm" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Type:
+            <span>Park</span>
+          </td>
+          <td>
+            Main Entrance:
+            <span>Kensington, Berkeley, and Richmond</span>
+          </td>
+          <td>
+            Yelp Review:
+            <span>4.8 stars</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Things to do:
+            <span>Steam Train, Merry Go Round, Animal Farm, and a Lake. </span>
+          </td>
+          <td>
+            Price:
+            <span>Most are free, but varies.</span>
+          </td>
+          <td>
+            Website:
+            <span>
+              <a
+                href="https://www.ebparks.org/parks/tilden"
+                >Tilden Regional Park</a
+              >
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <table class="guide">
+      <tbody>
+        <tr>
+          <td colspan="4" class="name">Fisherman's Wharf</td>
+        </tr>
+        <tr>
+          <td class="img1">
+            <img
+              src="images/sf1.jpg"
+              alt="Mirror Maze"
+              title="Maze"
+            />
+          </td>
+          <td class="img1">
+            <img
+              src="images/sf2.jpg"
+              alt="Left Hand Store"
+              title="Store"
+            />
+          </td>
+          <td class="img1">
+            <img
+              src="images/sf3.jpg"
+              alt="Merry Go Round"
+              title="Pier"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Type:
+            <span>Pier</span>
+          </td>
+          <td>
+            Location:
+            <span>Pier 39, San Francisco</span>
+          </td>
+          <td>
+            Yelp Review:
+            <span>4 stars</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Things to Do:
+            <span>Visit unique stores, Mirror Maze, Merry Go Round, Watch Talent Shows, & Much More!</span>
+          </td>
+          <td>
+            Parking:
+            <span>Yes but for a fee.</span>
+          </td>
+          <td>
+            Website:
+            <span>
+              <a href="https://www.fishermanswharf.org/">Fisherman's Wharf</a>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <table class="guide">
+      <tbody>
+        <tr>
+          <td colspan="4" class="name">San Francisco Cable Car System</td>
+        </tr>
+        <tr>
+          <td class="img1">
+            <img src="images/cc1.jpg" alt="Cable Car View" title="View" />
+          </td>
+          <td class="img1">
+            <img src="images/cc2.jpg" alt="Cable Car" title="Car" />
+          </td>
+          <td class="img1">
+            <img src="images/cc3.jpg" alt="Inside Cable Car" title="Inside" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Type:
+            <span>Metro System</span>
+          </td>
+          <td>
+            Location:
+            <span>San Francisco</span>
+          </td>
+          <td>
+            Yelp Review:
+            <span>3.5 stars</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Things To Do:
+            <span>Stop by unique streets like Height St. & Lombard St.</span>
+          </td>
+          <td>
+            Price:
+            <span>$8</span>
+          </td>
+          <td>
+            Website:
+            <span>
+              <a href="https://www.sfmta.com/getting-around/muni/cable-cars">San Francisco Cable Car System</a>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <footer>
+      <div class="container">
+        <div class="col-3">
+          <p>This is a project for a Web Tech course at Babson College.</p>
+        </div>
+        <div class="sitemap-link">
+          <a href="sitemap.html" class="button button-small">SITEMAP</a>
+        </div>
+        <br />
+      </div>
+    </footer>
+    <script>
+      function navbar() {
+        let nav = document.getElementById("myTopnav");
+        if (nav.className === "topnav") {
+          nav.className += "responsive";
+        } else {
+          nav.className = "topnav";
+        }
+      }
+      document.getElementsByClassName("icon").onclick = function () {
+        navBar();
+      };
+      const text = document.querySelector(".logo");
+      const strText = text.textContent;
+      const splitText = strText.split("");
+      text.textContent = "";
+      console.log(splitText);
+      for (let i = 0; i < splitText.length; i++) {
+        text.innerHTML += "<span>" + splitText[i] + "</span>";
+      }
+      let char = 0;
+      let timer = setInterval(onTick, 50);
+      function onTick() {
+        const span = text.querySelectorAll("span")[char];
+        span.classList.add("fade");
+        char++;
+        if (char === splitText.length) {
+          complete();
+          return;
+        }
+        function complete() {
+          clearInterval(timer);
+          timer = null;
+        }
+      }
+    </script>
   </body>
 </html>

@@ -1,140 +1,141 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Serif+4:opsz,wght@8..60,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Serif+4:opsz,wght@8..60,600&display=swap');
-*{
-    box-sizing: border-box;
-    transition: all ease-in-out 250ms;
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Serif+4:opsz,wght@8..60,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Serif+4:opsz,wght@8..60,600&display=swap");
+* {
+  box-sizing: border-box;
+  transition: all ease-in-out 250ms;
 }
-body{
-    margin:0;
-    text-align: center;
-    font-family:"Raleway",sans-serif;
+body {
+  margin: 0;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
 }
-img{
-    max-width: 200px;
-    max-height: 300px;
-    display:inline-block;
+img {
+  max-width: 200px;
+  max-height: 300px;
+  display: inline-block;
 }
 .logo{
     font-family:"Bebas Neue", cursive;
-    color: rgb(117, 139, 253);
+    color: #54494b;
+    text-shadow: 2px 2px black;
     display:inline-block;
     margin-bottom: 0;
     font-size: 70px;
     text-align: center;
 }
-.logo span{
-    opacity: 0;
-    transition: all 2s ease;
+.logo span {
+  opacity: 0;
+  transition: all 2s ease;
 }
-.logo span.fade{
-    opacity: 1;
+.logo span.fade {
+  opacity: 1;
 }
-@media screen and (max-width:426px){
-    .logo{
-        font-size:30px;
-        display:flex;
-        justify-content: center;
-    }
+@media screen and (max-width: 426px) {
+  .logo {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+  }
 }
-h1{
-    font-weight: 300;
-    font-size: 4rem;
-    color:rgb(117, 139, 253)
+h1 {
+  font-weight: 300;
+  font-size: 4rem;
+  color: rgb(117, 139, 253);
 }
-#top{
-    font-family: "Bebas Neue", cursive;
+#top {
+  font-family: "Bebas Neue", cursive;
 }
-.text{
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
-    padding-left: 1em;
-    padding-right: 1em;
-    color:white;
-    margin-top: 1em;
-    font-weight: 700;
+.text {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: white;
+  margin-top: 1em;
+  font-weight: 700;
 }
-@media (max-width: 796px){
-    .text{
-        font-size: 2rem;
-        margin-top: 150px;
-    }
-}
-@media (max-width: 426px){
-    .text span.bold{
-        font-size: 40px;
-    }
-}
-.text span{
-    font-weight: 300;
-    display: block;
-    font-size: .85em;
-}
-span.bold{
-    font-weight: 700;
-    color: #758BFD;
-    text-transform: uppercase;
-    font-style: italic;
-    font-size: 4rem;
-}
-.name{
-    font-weight: 600;
+@media (max-width: 796px) {
+  .text {
     font-size: 2rem;
-    color: #758BFD;
-    text-transform: uppercase;
-    padding: 5px;
+    margin-top: 150px;
+  }
 }
-td{
-    color: #55494B;
-    font-weight: 600;
-    padding: 10px;
-    font-family: "Bebas Neue", cursive;
-    font-size: 20px;
+@media (max-width: 426px) {
+  .text span.bold {
+    font-size: 40px;
+  }
 }
-td span{
-    color:#758BFD;
-    font-weight: 200;
-    text-decoration-color: #758BFD;
-    font-family: "Bebas Neue", cursive;
-    font-size: 20px;
-    text-transform: uppercase; 
+.text span {
+  font-weight: 300;
+  display: block;
+  font-size: 0.85em;
 }
-.guide-head h1{
-    font-weight: 300;
-    color:#55494B;
-    text-transform: uppercase;
-    padding-top: 5px;
-    padding-bottom: 5px;
+span.bold {
+  font-weight: 700;
+  color: #758bfd;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 4rem;
 }
-.button{
-    display: inline-block;
-    font-size: 1rem;
-    font-weight: bold;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-width:2px;
-    border-style: solid;
-    padding: 0.5em 1.75em;
-    color: white;
+.name {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #758bfd;
+  text-transform: uppercase;
+  padding: 5px;
+}
+td {
+  color: #55494b;
+  font-weight: 600;
+  padding: 10px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 20px;
+}
+td span {
+  color: #758bfd;
+  font-weight: 200;
+  text-decoration-color: #758bfd;
+  font-family: "Bebas Neue", cursive;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.guide-head h1 {
+  font-weight: 300;
+  color: #55494b;
+  text-transform: uppercase;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.button {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-width: 2px;
+  border-style: solid;
+  padding: 0.5em 1.75em;
+  color: white;
 }
 .button-accent:hover,
-.button-accent:focus{
-    background-color: #758BFD;
-    color: white;
+.button-accent:focus {
+  background-color: #758bfd;
+  color: white;
 }
-header{
-    position: absolute;
-    margin-top: 1em;
-    left: 0;
-    right: 0;
+header {
+  position: absolute;
+  margin-top: 1em;
+  left: 0;
+  right: 0;
 }
-nav ul{
-    margin:0;
-    padding:0;
-    list-style: none;
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-nav li{
-    display:inline-block;
-    margin: 1em;
+nav li {
+  display: inline-block;
+  margin: 1em;
 }
 nav a{
     font-weight: 900;
@@ -142,64 +143,297 @@ nav a{
     text-transform: uppercase;
     font-size: 0.8em;
     padding: 1.5em;
-    color:rgb(117, 139, 253);
+    color:#54494b;
+    text-shadow: 2px 2px black;
 }
 nav a:hover,
-nav a:focus{
-    color:white;
+nav a:focus {
+  color: white;
 }
-.topnav .icon{
-    display:none;
-}
-@media screen and (max-width:426px){
-    .topnav li{
-        display: none;
-    }
-    .topnav a.icon {
-        display: block;
-        float: right;
-    }
+.topnav .icon {
+  display: none;
 }
 @media screen and (max-width: 426px) {
-    .topnav.responsive {
-        position:relative;
-    }
-    .topnav.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .topnav.responsive a {
-        float: right;
-        display: block;
-        text-align: right;
-    }
+  .topnav li {
+    display: none;
+  }
+  .topnav a.icon {
+    display: block;
+    float: right;
+  }
 }
-table{
-    padding-bottom: 5px;
+@media screen and (max-width: 426px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: right;
+    display: block;
+    text-align: right;
+  }
 }
-.guide{
-    width:50%;
-    border-collapse: collapse;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 50 #EE6123;
-    margin:auto;
+table {
+  padding-bottom: 5px;
+}
+.guide {
+  width: 50%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 50 #ee6123;
+  margin: auto;
 }
 .guide td a {
-    text-decoration: none;
-    color: #758BFD;
+  text-decoration: none;
+  color: #758bfd;
 }
-footer{
-    background-color: #55494B;
+footer {
+  background-color: #55494b;
+  color: white;
+  text-align: center;
+  height: auto;
+}
+.col-3 {
+  padding: 1em 0;
+}
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+.res-hero {
+  background-image: url(images/sanfran.jpg);
+  padding: 10em 0;
+  background-size: cover;
+  background-position: center;
+  height: 45em;
+}
+.brunch-hero {
+  background-image: url(images/sanfran.jpg);
+  padding: 10em 0;
+  background-size: cover;
+  background-position: center;
+  height: 45em;
+}
+.outdoor-hero {
+  background-image: url(images/sanfran.jpg);
+  padding: 10em 0;
+  background-size: cover;
+  background-position: center;
+  height: 45em;
+}
+.quick-hero {
+  background-image: url(images/sanfran.jpg);
+  padding: 10em 0;
+  background-size: cover;
+  background-position: center;
+  height: 45em;
+}
+.nightlife-hero {
+  background-image: url(images/sanfran.jpg);
+  padding: 10em 0;
+  background-size: cover;
+  background-position: center;
+  height: 45em;
+}
+.activities-hero {
+  background-image: url(images/sanfran.jpg);
+  padding: 10em 0;
+  background-size: cover;
+  background-position: center;
+  height: 45em;
+}
+.contact-text {
+  font-size: 4rem;
+  margin-bottom: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: #fff;
+  margin-top: 1em;
+  font-weight: 700;
+}
+.sitemap-hero {
+    background-image: url("images/sanfran.jpg");
+    padding: 10em 0;
+    background-size: cover;
+    background-position: center;
+    height: fit-content;
+}
+#small{
     color:white;
-    text-align: center;
-    height: auto;
+    font-family: "Bebas Neue", cursive;
 }
-.col-3{
-    padding:1em 0;
+.contact-text span {
+  font-weight: 300;
+  display: block;
+  font-size: 0.65em;
 }
-.container{
-    width:95%;
-    margin:0 auto;
+@media (max-width: 426px) {
+  .contact-text {
+    font-size: 40px;
+  }
+}
+.feedback h1 {
+  margin: 1em 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #EE6123;
+}
+legend {
+  color: #EE6123;
+  font-size: 2em;
+}
+label {
+  color: #54494B;
+}
+.info {
+  font-size: 1.75em;
+}
+.recs {
+  font-size: 1.2em;
+}
+.contact-hero {
+  background-image: url("images/sanfran.jpg");
+  padding: 10em 0;
+  background-size: cover;
+  background-position: center;
+  height: 40em;
+}
+.one {
+  position: relative;
+  height: 20vh;
+}
+.one .info {
+  display: inline-block;
+  padding: 0.35em 1em;
+}
+.one input {
+  height: 5vh;
+}
+@media (max-width: 768px) {
+  .one {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: fit-content;
+    width: 100%;
+  }
+
+  .one label {
+    font-size: 20px;
+  }
+}
+
+.two {
+  width: 50%;
+  float: right;
+  height: 55vh;
+}
+.two .recs {
+  padding: 0.35em;
+}
+.two input {
+  height: 5vh;
+}
+@media (max-width: 426px) {
+  .two {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: fit-content;
+    width: 100%;
+  }
+  .two label {
+    font-size: 20px;
+  }
+}
+.three {
+  height: 55vh;
+}
+.three .review {
+  padding: 0.35em;
+  font-weight: 600;
+}
+
+input {
+  border: #FFCF40 solid 1.5px;
+  background-color: white;
+}
+
+textarea {
+  border: #FFCF40 solid 1.5px;
+  background-color: white;
+}
+
+button[type="submit"] {
+  margin-top: 5px;
+  color: #FFCF40;
+  background-color: #fff;
+  border: #FFCF40 1.5px solid;
+  width: 100%;
+  height: 40px;
+}
+.submit:hover {
+  background-color: #FFCF40;
+  color: white;
+  text-transform: uppercase;
+}
+/* responsive CSS for Content.HTML */
+@media (max-width: 768px) {
+  .feedback h1 {
+    margin-top: 70px;
+  }
+}
+@media (max-width: 768px) {
+  button[type="submit"] {
+    height: 40px;
+    width: 100%;
+    color: white;
+    background-color: #FFCF40;
+  }
+}
+h1.text{
+    font-size: 4rem;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #fff;
+    font-weight:300;
+    margin-top:100px;
+}
+@media (max-width:796px){
+  h1.text{
+    font-size: 40px;
+    margin-top: 150px;;
+    font-weight:700px;
+  }
+  .sitemap-hero{
+    height:fit-content;
+  }
+}
+.sitemap{
+    width:50%;
+      border-collapse: collapse;
+      border-radius:5px;
+      box-shadow:0px 0px 50px #758BFD;
+      margin:auto;
+      list-style-type: none;
+      padding-top:10px;
+      margin-bottom:3px;
+      display:block;
+      height:fit-content;
+      background-color: #fff;
+}
+.sitemap li{
+    display:block;
+    padding: 10px 10px;
+    text-align: left;
+}
+.sitemap a{
+    text-decoration: none;
+    color:#91C7B1;
+    font-size:1.5rem;
 }

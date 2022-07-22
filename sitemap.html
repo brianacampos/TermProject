@@ -89,5 +89,81 @@
         </ul>
       </nav>
     </header>
+    <section class="sitemap-hero">
+      <div class="bio">
+        <h1 class="text">SITEMAP</h1>
+      </div>
+      <ul class="sitemap">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="restaurants.html">Restaurant Guide</a>
+        </li>
+        <li>
+          <a href="brunch.html">Brunch Guide</a>
+        </li>
+        <li>
+          <a href="outdoor.html">Outdoor Guide</a>
+        </li>
+        <li>
+          <a href="quick-stops.html">Quick Stops Guide</a>
+        </li>
+        <li>
+          <a href="nightlife.html">Nightlife</a>
+        </li>
+        <li>
+          <a href="activities.html">Activities</a>
+        </li>
+        <li>
+          <a href="contact-us.html">Contact</a>
+        </li>
+      </ul>
+    </section>
+    <br />
+    <footer>
+      <div class="container">
+        <div class="col-3">
+          <p>This is a project for a Web Tech course at Babson College.</p>
+        </div>
+      </div>
+    </footer>
+    <br />
+    <script>
+      function navbar() {
+        let nav = document.getElementById("myTopnav");
+        if (nav.className === "topnav") {
+          nav.className += "responsive";
+        } else {
+          nav.className = "topnav";
+        }
+      }
+      document.getElementsByClassName("icon").onclick = function () {
+        navBar();
+      };
+      const text = document.querySelector(".logo");
+      const strText = text.textContent;
+      const splitText = strText.split("");
+      text.textContent = "";
+      console.log(splitText);
+      for (let i = 0; i < splitText.length; i++) {
+        text.innerHTML += "<span>" + splitText[i] + "</span>";
+      }
+      let char = 0;
+      let timer = setInterval(onTick, 50);
+      function onTick() {
+        const span = text.querySelectorAll("span")[char];
+        span.classList.add("fade");
+        char++;
+        if (char === splitText.length) {
+          complete();
+          return;
+        }
+        function complete() {
+          clearInterval(timer);
+          timer = null;
+        }
+      }
+    </script>
   </body>
 </html>

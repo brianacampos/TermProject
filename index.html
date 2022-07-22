@@ -133,7 +133,7 @@
     <br />
     <h1 class="contentText">FEATURED CONTENT</h1>
     <div class="slideshow-container">
-      <div class="mySlides fade" style="display: block">
+      <div class="mySlides fade">
         <div class="numbertext">1 / 6</div>
         <img
           src="images/koisushi.jpg"
@@ -148,7 +148,7 @@
           >
         </div>
       </div>
-      <div class="mySlides fade" style="display: none">
+      <div class="mySlides fade">
         <div class="numbertext">2 / 6</div>
         <img
           src="images/littlelouie.jpg"
@@ -163,7 +163,7 @@
           >
         </div>
       </div>
-      <div class="mySlides fade" style="display: none">
+      <div class="mySlides fade">
         <div class="numbertext">3 / 6</div>
         <img
           src="images/dolorespark.jpg"
@@ -178,7 +178,7 @@
           >
         </div>
       </div>
-      <div class="mySlides fade" style="display: none">
+      <div class="mySlides fade">
         <div class="numbertext">4 / 6</div>
         <img
           src="images/kaleidoscope.jpg"
@@ -193,7 +193,7 @@
           >
         </div>
       </div>
-      <div class="mySlides fade" style="display: none">
+      <div class="mySlides fade">
         <div class="numbertext">5 / 6</div>
         <img
           src="images/marinwaterfalls.jpg"
@@ -208,7 +208,7 @@
           >
         </div>
       </div>
-      <div class="mySlides fade" style="display: none">
+      <div class="mySlides fade">
         <div class="numbertext">6 / 6</div>
         <img
           src="images/kips.jpg"
@@ -223,16 +223,18 @@
           >
         </div>
       </div>
-      <a class="prev" onclick="plusSlides(-1)">&gt;</a>
-      <a class="next" onclick="plusSlides(1)">&lt;</a>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
     <br />
     <div style="text-align: center">
-      <span class="dot active" onclick="currentslide(1)"></span>
-      <span class="dot" onclick="currentslide(2)"></span>
-      <span class="dot" onclick="currentslide(3)"></span>
-      <span class="dot" onclick="currentslide(4)"></span>
-      <span class="dot" onclick="currentslide(5)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+
     </div>
     <br />
     <section class="subscribe">
@@ -306,10 +308,16 @@
       };
       btn.addEventListener("click", aboutMe);
       document.addEventListener("click", orgText);
+
       let slideIndex = 1;
       showSlides(slideIndex);
+
       function plusSlides(n) {
         showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
       }
       function showSlides(n) {
         let i;
@@ -321,7 +329,7 @@
         if (n < 1) {
           slideIndex = slides.length;
         }
-        if ((i = 0), i < slides.length, i++) {
+        for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
         }
         for (i = 0; i < dots.length; i++) {
@@ -330,6 +338,7 @@
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += "active";
       }
+
       const img = document.getElementById("myImg");
       function enlargeImg() {
         img.src = "images/another1.jpg";
